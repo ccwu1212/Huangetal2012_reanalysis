@@ -1,0 +1,71 @@
+
+########################## Load the data ##########################
+# data from window and step size 20kbp for aus, japonica, indica, and Or-II
+dom1<-read.table("Osat_aus_REFasANC_minInd5_setMinDepth5_setMaxDepth180.SAJ.ALLCHR.window20000_step20000.thetas.pestPG",header=T); dom1$thetaW<-dom1$tW/dom1$nSites; dom1$thetaP<-dom1$tP/dom1$nSites; dom1$SNP<-paste(dom1$Chr,dom1$WinCenter,sep="_")
+dom2<-read.table("Osat_japonica_REFasANC_minInd61_setMinDepth61_setMaxDepth2904.SAJ.ALLCHR.window20000_step20000.thetas.pestPG",header=T); dom2$thetaW<-dom2$tW/dom2$nSites; dom2$thetaP<-dom2$tP/dom2$nSites; dom2$SNP<-paste(dom2$Chr,dom2$WinCenter,sep="_")
+dom3<-read.table("Osat_indica_REFasANC_minInd65_setMinDepth65_setMaxDepth3114.SAJ.ALLCHR.window20000_step20000.thetas.pestPG",header=T); dom3$thetaW<-dom3$tW/dom3$nSites; dom3$thetaP<-dom3$tP/dom3$nSites; dom3$SNP<-paste(dom3$Chr,dom3$WinCenter,sep="_")
+wild<-read.table("Osat_wild_OrII_REFasANC_minInd40_setMinDepth40_setMaxDepth605.SAJ.ALLCHR.window20000_step20000.thetas.pestPG",header=T); wild$thetaW<-wild$tW/wild$nSites; wild$thetaP<-wild$tP/wild$nSites; wild$SNP<-paste(wild$Chr,wild$WinCenter,sep="_")
+
+# data from window and step size 100kbp for aus, japonica, indica, and Or-II
+dom1<-read.table("Osat_aus_REFasANC_minInd5_setMinDepth5_setMaxDepth180.SAJ.ALLCHR.window100000_step100000.thetas.pestPG",header=T); dom1$thetaW<-dom1$tW/dom1$nSites; dom1$thetaP<-dom1$tP/dom1$nSites; dom1$SNP<-paste(dom1$Chr,dom1$WinCenter,sep="_")
+dom2<-read.table("Osat_japonica_REFasANC_minInd61_setMinDepth61_setMaxDepth2904.SAJ.ALLCHR.window100000_step100000.thetas.pestPG",header=T); dom2$thetaW<-dom2$tW/dom2$nSites; dom2$thetaP<-dom2$tP/dom2$nSites; dom2$SNP<-paste(dom2$Chr,dom2$WinCenter,sep="_")
+dom3<-read.table("Osat_indica_REFasANC_minInd65_setMinDepth65_setMaxDepth3114.SAJ.ALLCHR.window100000_step100000.thetas.pestPG",header=T); dom3$thetaW<-dom3$tW/dom3$nSites; dom3$thetaP<-dom3$tP/dom3$nSites; dom3$SNP<-paste(dom3$Chr,dom3$WinCenter,sep="_")
+wild<-read.table("Osat_wild_OrII_REFasANC_minInd40_setMinDepth40_setMaxDepth605.SAJ.ALLCHR.window100000_step100000.thetas.pestPG",header=T); wild$thetaW<-wild$tW/wild$nSites; wild$thetaP<-wild$tP/wild$nSites; wild$SNP<-paste(wild$Chr,wild$WinCenter,sep="_")
+
+# data from window and step size 500kbp for aus, japonica, indica, and Or-II
+dom1<-read.table("Osat_aus_REFasANC_minInd5_setMinDepth5_setMaxDepth180.SAJ.ALLCHR.window500000_step500000.thetas.pestPG",header=T); dom1$thetaW<-dom1$tW/dom1$nSites; dom1$thetaP<-dom1$tP/dom1$nSites; dom1$SNP<-paste(dom1$Chr,dom1$WinCenter,sep="_")
+dom2<-read.table("Osat_japonica_REFasANC_minInd61_setMinDepth61_setMaxDepth2904.SAJ.ALLCHR.window500000_step500000.thetas.pestPG",header=T); dom2$thetaW<-dom2$tW/dom2$nSites; dom2$thetaP<-dom2$tP/dom2$nSites; dom2$SNP<-paste(dom2$Chr,dom2$WinCenter,sep="_")
+dom3<-read.table("Osat_indica_REFasANC_minInd65_setMinDepth65_setMaxDepth3114.SAJ.ALLCHR.window500000_step500000.thetas.pestPG",header=T); dom3$thetaW<-dom3$tW/dom3$nSites; dom3$thetaP<-dom3$tP/dom3$nSites; dom3$SNP<-paste(dom3$Chr,dom3$WinCenter,sep="_")
+wild<-read.table("Osat_wild_OrII_REFasANC_minInd40_setMinDepth40_setMaxDepth605.SAJ.ALLCHR.window500000_step500000.thetas.pestPG",header=T); wild$thetaW<-wild$tW/wild$nSites; wild$thetaP<-wild$tP/wild$nSites; wild$SNP<-paste(wild$Chr,wild$WinCenter,sep="_")
+
+# data from window and step size 1000kbp for aus, japonica, indica, and Or-II
+dom1<-read.table("Osat_aus_REFasANC_minInd5_setMinDepth5_setMaxDepth180.SAJ.ALLCHR.window1000000_step1000000.thetas.pestPG",header=T); dom1$thetaW<-dom1$tW/dom1$nSites; dom1$thetaP<-dom1$tP/dom1$nSites; dom1$SNP<-paste(dom1$Chr,dom1$WinCenter,sep="_")
+dom2<-read.table("Osat_japonica_REFasANC_minInd61_setMinDepth61_setMaxDepth2904.SAJ.ALLCHR.window1000000_step1000000.thetas.pestPG",header=T); dom2$thetaW<-dom2$tW/dom2$nSites; dom2$thetaP<-dom2$tP/dom2$nSites; dom2$SNP<-paste(dom2$Chr,dom2$WinCenter,sep="_")
+dom3<-read.table("Osat_indica_REFasANC_minInd65_setMinDepth65_setMaxDepth3114.SAJ.ALLCHR.window1000000_step1000000.thetas.pestPG",header=T); dom3$thetaW<-dom3$tW/dom3$nSites; dom3$thetaP<-dom3$tP/dom3$nSites; dom3$SNP<-paste(dom3$Chr,dom3$WinCenter,sep="_")
+wild<-read.table("Osat_wild_OrII_REFasANC_minInd40_setMinDepth40_setMaxDepth605.SAJ.ALLCHR.window1000000_step1000000.thetas.pestPG",header=T); wild$thetaW<-wild$tW/wild$nSites; wild$thetaP<-wild$tP/wild$nSites; wild$SNP<-paste(wild$Chr,wild$WinCenter,sep="_")
+
+
+########################## Preparing input file for analysis ##########################
+
+# Filter windows that had at least 25% of sites analyzed 
+# example for data that had window and step size of 1000 kbp
+WINDSIZE=1000000; PROP=0.25
+wild<-wild[wild$nSites/WINDSIZE > PROP,];
+
+# Analyze windows that were passed filter in both domesticated and wild subpopulation
+dom1<-dom1[dom1$nSites/WINDSIZE > PROP,]; dom1<-dom1[dom1$SNP %in% intersect(dom1$SNP, wild$SNP),]
+dom2<-dom2[dom2$nSites/WINDSIZE > PROP,]; dom2<-dom2[dom2$SNP %in% intersect(dom2$SNP, wild$SNP),]
+dom3<-dom3[dom3$nSites/WINDSIZE > PROP,]; dom3<-dom3[dom3$SNP %in% intersect(dom3$SNP, wild$SNP),]
+
+# Make a dataframe of window name, chromosome name, middle base pair of window, and pi_w/pi_d value for aus, japonica, and indica data (in order of commands)
+df1<-data.frame(SNP=paste(dom1$Chr,dom1$WinCenter,sep="_"),CHR=dom1$Chr,BP=dom1$WinCenter,P=(wild[wild$SNP %in% intersect(dom1$SNP, wild$SNP),]$tP/wild[wild$SNP %in% intersect(dom1$SNP, wild$SNP),]$nSites)/(dom1$tP/dom1$nSites))
+df1<-df1[!is.na(df1$P),]
+df2<-data.frame(SNP=paste(dom2$Chr,dom2$WinCenter,sep="_"),CHR=dom2$Chr,BP=dom2$WinCenter,P=(wild[wild$SNP %in% intersect(dom2$SNP, wild$SNP),]$tP/wild[wild$SNP %in% intersect(dom2$SNP, wild$SNP),]$nSites)/(dom2$tP/dom2$nSites))
+df2<-df2[!is.na(df2$P),]
+df3<-data.frame(SNP=paste(dom3$Chr,dom3$WinCenter,sep="_"),CHR=dom3$Chr,BP=dom3$WinCenter,P=(wild[wild$SNP %in% intersect(dom3$SNP, wild$SNP),]$tP/wild[wild$SNP %in% intersect(dom3$SNP, wild$SNP),]$nSites)/(dom3$tP/dom3$nSites))
+df3<-df3[!is.na(df3$P),]
+
+########################## Analysis ##########################
+# Obtain windows that are above the top 2.5% pi_w/pi_d value 
+PERCENT=0.025
+top1<-head(df1[order(df1$P,decreasing=T),],n=nrow(df1)*PERCENT)
+top1<-top1[order(top1[,2],top1[,3]),]
+top2<-head(df2[order(df2$P,decreasing=T),],n=nrow(df2)*PERCENT)
+top2<-top2[order(top2[,2],top2[,3]),]
+top3<-head(df3[order(df3$P,decreasing=T),],n=nrow(df3)*PERCENT)
+top3<-top3[order(top3[,2],top3[,3]),]
+
+# Obtain the lowest 2.5% pi_w/pi_d value cutoff to apply for all three domesticated subpopulation
+cutoff<-sort(c(tail(head(df1[order(df1$P,decreasing=T),],n=nrow(df1)*PERCENT),n=1)$P,tail(head(df2[order(df2$P,decreasing=T),],n=nrow(df2)*PERCENT),n=1)$P,tail(head(df3[order(df3$P,decreasing=T),],n=nrow(df3)*PERCENT),n=1)$P))[1]
+
+# Subset the windows that pass the cutoff
+df1top<-df1[df1$P > cutoff,]
+df2top<-df2[df2$P > cutoff,]
+df3top<-df3[df3$P > cutoff,]
+
+# Report the window that overlaps in all three domesticated subpopulation
+cat(Reduce(intersect,list(df1top$SNP,df2top$SNP,df3top$SNP)),sep="\n")
+
+
+
+
